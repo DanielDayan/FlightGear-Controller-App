@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/connect_destination">
+
+    <fragment
+        android:id="@+id/connect_destination"
+        android:name="com.example.flightgear_controller_app.screens.connect.ConnectFragment"
+        android:label="connect_fragment"
+        tools:layout="@layout/connect_fragment">
+        <action
+            android:id="@+id/action_connect_to_controller"
+            app:destination="@id/controller_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/controller_destination"
+        android:name="com.example.flightgear_controller_app.screens.controller.ControllerFragment"
+        android:label="controller_fragment"
+        tools:layout="@layout/controller_fragment">
+        <action
+            android:id="@+id/action_controller_to_thank"
+            app:destination="@id/thank_you_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+            <!--            app:popUpTo="@+id/connect_destination" />-->
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/thank_you_destination"
+        android:name="com.example.flightgear_controller_app.screens.endScreen.ThankYouFragment"
+        android:label="thank_you_fragment"
+        android:layout="@layout/thank_you_fragment">
+        <action
+            android:id="@+id/action_restart_to_connect"
+            app:destination="@+id/connect_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/connect_destination" />
+
+
+    </fragment>
+</navigation>
