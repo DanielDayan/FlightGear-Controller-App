@@ -14,22 +14,24 @@
         <TextView
             android:id="@+id/thank_you"
             style="@style/Widget.AppCompat.TextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="97dp"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
             android:layout_marginBottom="300dp"
             android:fontFamily="cursive"
             android:shadowColor="@color/selected_red_color"
-            android:text="@string/thank_you"
+            android:text="Thank you for\n being our pilot"
             android:textAlignment="center"
             android:textColor="@color/black_text_color"
             android:textSize="40sp"
             android:textStyle="bold|italic"
-            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+
 
         <Button
             android:id="@+id/fly_again_button"
@@ -51,9 +53,9 @@
             android:layout_width="220dp"
             android:layout_height="79dp"
             android:layout_marginTop="400dp"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/goodbye"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:fontFamily="sans-serif-medium"
             android:textSize="25sp"
             android:theme="@style/DisconnectButton"
             app:layout_constraintBottom_toBottomOf="parent"
