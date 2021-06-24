@@ -105,13 +105,40 @@ Pressing on **Good Bye!** will close the app.
 
 **Enjoy Your Flight**
 
-##  Demonstration Video
-
 
 ## UML diagram
 
 
 ![FG_app_uml](https://user-images.githubusercontent.com/64739791/123252755-4daa1400-d4f5-11eb-975a-f0554d993132.jpeg)
 
+
+
+
+## MVVM architecture
+
+In this project we used the MVVM architecture.
+The code is defined by 3 main sections :
+
+> Model
+
+
+The *FGConnecter* which is an Kotlin single object  that located in
+ *models* directory ; is functioning as our model. 
+ It establishing the connection with server and send it data designed as an Active object with tasks orgainzed in *BlockingQueue*
+ 
+> ViewModel
+
+Next we have different ViewModels such as *ConnectorViewModel* 
+and *ControllerViewModel* for each fragment/view in the application
+Thorugh data binding and events those view models get info from user and operate the model by inserting task to its task queue and different thread will execute those tasks.
+>View
+
+The app contain 3 different views implented as Fragments: 
+1. *ConnectorFragment* - openning view of the app , connect the user to the FG server
+2. *ControllerFragment* - the view that has the joystick and all the
+features that controls the plane flight.
+3. *ThankYouFragment* - end screen of the app.
+
+##  Demonstration Video
 
 
