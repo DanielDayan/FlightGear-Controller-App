@@ -141,5 +141,5 @@ features that controls the plane flight.
 
 ##  Demonstration Video
 
-[Video](youtube.com/watch?v=1K9snaX_h4o)
+[Video](https://youtu.be/1K9snaX_h4o)
 
